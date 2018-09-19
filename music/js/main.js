@@ -16,7 +16,7 @@ $(document).ready(function() {
     $(".hero-wrapper").click(function(e) {
         e.preventDefault();
 
-        var position = $("#home").offset().top;
+        var position = $("#music-main").offset().top;
 
         $("html, body").animate({
             scrollTop: position
@@ -24,15 +24,15 @@ $(document).ready(function() {
 
         return false;
     });
-    
+
     $("#burger").click(function(e) {
         $("#main-nav").fadeIn(100, function() {
             $("#main-nav").addClass('nav-open');
         });
-        
+
         $("#mobile-nav-button").fadeOut(100);
     });
-    
+
     $("#main-nav").click(function(e) {
         if ( $(this).is(".nav-open") ) {
             $(this).removeClass("nav-open");
@@ -41,40 +41,17 @@ $(document).ready(function() {
             });
         }
     });
-    
-    var typed;
 
-    function startTyped() {
-        typed = new Typed("#intro", {
-            strings: [
-                "<span>make games</span>.",
-
-                "^750 <span>produce music</span>.", 
-
-                "^750have a&nbsp;<span>passion</span>&nbsp;for&nbsp;<span>creation</span>.^1000"
-            ],
-            smartBackspace: true,
-            loop: true,
-            startDelay: 750,
-            backDelay: 1500,
-            typeSpeed: 40,
-            backSpeed: 30,
-            showCursor: false
-        });
-    }
-    
-    function startIntro() {
-        $("#pre-intro").css('display', 'block');
-        $("#pre-intro").animate({ opacity: 1 }, { duration: 500 });
-            
-        setTimeout(startTyped, 100);
-    }
-
-    function setupIntro() {
-        $("#info-main").fadeIn(750, function() {
-            setTimeout(startIntro, 1000);
-        });
-    }
-
-    setTimeout(setupIntro, 1000);
+    $(".music-desc-expand-button").click(function() {
+        if ($(this).hasClass("expanded")) {
+            $(this).removeClass("expanded");
+            $(this).children()[0].innerHTML = "More Info";
+            $($(this).next().slideUp(250)); 
+        }
+        else {
+            $(this).addClass("expanded");
+            $(this).children()[0].innerHTML = "Less Info";
+            $($(this).next().slideDown(250)); 
+        }
+    });
 });
