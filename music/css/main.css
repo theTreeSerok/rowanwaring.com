@@ -201,8 +201,8 @@ a.active:hover + .nav-underbar {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    border-radius: 3px;
-    transition: .2s ease-in-out;
+    transition: .2s;
+    width: 100%;
 }
 
 .music-desc-expand-button:hover {
@@ -212,7 +212,7 @@ a.active:hover + .nav-underbar {
 
 .music-button-inner {
     margin: 0;
-    padding: 4px 10px;
+    padding: 7px 0px;
 }
 
 .music-desc {
@@ -223,6 +223,36 @@ a.active:hover + .nav-underbar {
 .music-inner-desc {
     padding: 15px;
     color: #ccc;
+    
+    padding: 3px;
+}
+
+#music-links {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#music-links a {
+    color: #15b387;
+    transition: .2s;
+}
+
+#music-links a:hover {
+    color: #38e6ba;
+    transition: .2s;
+}
+
+#soundcloud-link p, #bandcamp-link p {
+    color: #ccc;
+    text-decoration: none;
+}
+
+#soundcloud-link p {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 /* other */
