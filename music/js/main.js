@@ -54,4 +54,12 @@ $(document).ready(function() {
             $($(this).next().slideDown(250)); 
         }
     });
+
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > 50) {
+            $(".header-wrapper").addClass("scrolled");
+        } else {
+            $(".header-wrapper").removeClass("scrolled");
+        }
+    });
 });

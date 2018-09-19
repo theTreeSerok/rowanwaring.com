@@ -13,6 +13,11 @@ body {
     margin: 0px;
     height: 100%;
     width: 100%;
+    
+    background-image: url("../assets/img/backgrounds/Desert-Evening-Desktop-Wallpaper.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header-wrapper {
@@ -29,6 +34,12 @@ body {
     z-index: 100;
 
     pointer-events: none;
+    
+    transition: .2s;
+}
+
+.header-wrapper.scrolled {
+    background-color: rgba(0,0,0,0.25);
 }
 
 .hero-wrapper, #main-nav {
@@ -222,7 +233,7 @@ a.active:hover + .nav-underbar {
 
 .music-inner-desc {
     padding: 15px;
-    color: #ccc;
+    color: #eee;
     
     padding: 3px;
 }
@@ -236,7 +247,7 @@ a.active:hover + .nav-underbar {
 }
 
 #music-links a {
-    color: #15b387;
+    color: #26c498;
     transition: .2s;
 }
 
@@ -246,7 +257,7 @@ a.active:hover + .nav-underbar {
 }
 
 #soundcloud-link p, #bandcamp-link p {
-    color: #ccc;
+    color: #eee;
     text-decoration: none;
 }
 
@@ -297,10 +308,13 @@ a.active:hover + .nav-underbar {
     position: relative;
     height: 200px;
     width: 100%;
+    margin-top: 50px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
+    background-color: #222;
 }
 
 .inner-footer {
@@ -436,7 +450,7 @@ a.active:hover + .nav-underbar {
     }
     
     .nav-item a {
-        color: #ccc;
+        color: #eee;
         font-size: 1.5em;
     }
     
