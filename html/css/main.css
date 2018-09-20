@@ -29,6 +29,8 @@ body {
     z-index: 100;
 
     pointer-events: none;
+    
+    transition: .2s;
 }
 
 .header-wrapper.scrolled {
