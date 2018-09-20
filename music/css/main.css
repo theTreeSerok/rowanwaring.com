@@ -223,6 +223,7 @@ a.active:hover + .nav-underbar {
 
 .music-button-inner {
     margin: 0;
+    color: #eee;
     padding: 7px 0px;
 }
 
