@@ -42,39 +42,11 @@ $(document).ready(function() {
         }
     });
     
-    var typed;
-
-    function startTyped() {
-        typed = new Typed("#intro", {
-            strings: [
-                "<span>make games</span>.",
-
-                "^750 <span>produce music</span>.", 
-
-                "^750have a&nbsp;<span>passion</span>&nbsp;for&nbsp;<span>creation</span>.^1000"
-            ],
-            smartBackspace: true,
-            loop: true,
-            startDelay: 750,
-            backDelay: 1500,
-            typeSpeed: 40,
-            backSpeed: 30,
-            showCursor: false
-        });
-    }
-    
-    function startIntro() {
-        $("#pre-intro").css('display', 'block');
-        $("#pre-intro").animate({ opacity: 1 }, { duration: 500 });
-            
-        setTimeout(startTyped, 100);
-    }
-
-    function setupIntro() {
-        $("#info-main").fadeIn(750, function() {
-            setTimeout(startIntro, 1000);
-        });
-    }
-
-    setTimeout(setupIntro, 1000);
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > 50) {
+            $(".header-wrapper").addClass("scrolled");
+        } else {
+            $(".header-wrapper").removeClass("scrolled");
+        }
+    });
 });

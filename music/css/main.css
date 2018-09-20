@@ -196,7 +196,7 @@ a.active:hover + .nav-underbar {
 .music-item {
     position: relative;
     padding: 5px;
-    background-color: rgba(150, 150, 150, 0.2);
+    background-color: rgba(90, 90, 90, 0.35);
     width: 600px;
     display: flex;
     flex-direction: column;
@@ -246,12 +246,12 @@ a.active:hover + .nav-underbar {
     margin-bottom: 25px;
 }
 
-#music-links a {
+.desc-link {
     color: #26c498;
     transition: .2s;
 }
 
-#music-links a:hover {
+.desc-link:hover {
     color: #38e6ba;
     transition: .2s;
 }

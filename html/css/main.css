@@ -31,6 +31,10 @@ body {
     pointer-events: none;
 }
 
+.header-wrapper.scrolled {
+    background-color: rgba(0,0,0,0.25);
+}
+
 .hero-wrapper, #main-nav {
     pointer-events: all;
 }
