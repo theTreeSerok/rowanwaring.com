@@ -16,7 +16,7 @@ $(document).ready(function() {
     $(".hero-wrapper").click(function(e) {
         e.preventDefault();
 
-        var position = $("#home").offset().top;
+        var position = $("#games-main").offset().top;
 
         $("html, body").animate({
             scrollTop: position
@@ -24,15 +24,15 @@ $(document).ready(function() {
 
         return false;
     });
-    
+
     $("#burger").click(function(e) {
         $("#main-nav").fadeIn(100, function() {
             $("#main-nav").addClass('nav-open');
         });
-        
+
         $("#mobile-nav-button").fadeOut(100);
     });
-    
+
     $("#main-nav").click(function(e) {
         if ( $(this).is(".nav-open") ) {
             $(this).removeClass("nav-open");
@@ -41,7 +41,20 @@ $(document).ready(function() {
             });
         }
     });
-    
+
+    $(".games-desc-expand-button").click(function() {
+        if ($(this).hasClass("expanded")) {
+            $(this).removeClass("expanded");
+            $(this).children()[0].innerHTML = "More Info";
+            $($(this).next().slideUp(250)); 
+        }
+        else {
+            $(this).addClass("expanded");
+            $(this).children()[0].innerHTML = "Less Info";
+            $($(this).next().slideDown(250)); 
+        }
+    });
+
     $(window).on("scroll", function() {
         if($(window).scrollTop() > 50) {
             $(".header-wrapper").addClass("scrolled");
