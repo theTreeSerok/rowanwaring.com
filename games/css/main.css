@@ -226,7 +226,7 @@ a.active:hover + .nav-underbar {
     text-align: center;
     
     opacity: 0;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .825);
     transition: .15s linear;
 }
 
@@ -274,6 +274,11 @@ a.active:hover + .nav-underbar {
     color: #eee;
     
     padding: 3px;
+}
+
+.games-inner-desc img {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .desc-link {
