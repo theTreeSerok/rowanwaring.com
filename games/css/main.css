@@ -13,7 +13,7 @@ body {
     margin: 0px;
     height: 100%;
     width: 100%;
-    
+
     background-image: url("../assets/img/backgrounds/Desert-Night-Desktop-Wallpaper.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@ body {
     z-index: 100;
 
     pointer-events: none;
-    
+
     transition: .2s;
 }
 
@@ -171,7 +171,7 @@ a.active:hover + .nav-underbar {
 /* music section */
 
 #games-main {
-    
+
 }
 
 #games-section-wrapper {
@@ -207,7 +207,7 @@ a.active:hover + .nav-underbar {
     position: relative;
     width: 100%;
     height: 300px;
-    
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -219,12 +219,12 @@ a.active:hover + .nav-underbar {
     left: 0;
     width: 100%;
     height: 100%;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    
+
     opacity: 0;
     background-color: rgba(0, 0, 0, .825);
     transition: .15s linear;
@@ -272,7 +272,7 @@ a.active:hover + .nav-underbar {
 .games-inner-desc {
     padding: 15px;
     color: #eee;
-    
+
     padding: 3px;
 }
 
@@ -304,27 +304,32 @@ a.active:hover + .nav-underbar {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     width: 250px;
     height: 50px;
-    border: 2px solid #e300e3;
-    border-radius: 25px;
 
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
 
-    transition: .3s ease;
+    transition: .2s linear;
 }
 
-.mover-button:hover {
-    border: 2px solid #6deeca;
-    background-color: rgba(0,0,0,.3);
+.button-brackets {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 .mover-link {
     color: #eee;
     font-size: 1.3em;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 /* footer */
@@ -338,7 +343,7 @@ a.active:hover + .nav-underbar {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
     background-color: #222;
 }
 
@@ -365,7 +370,7 @@ a.active:hover + .nav-underbar {
         height: 8vh;
         background-color: rgba(0,0,0,0.3);
     }
-    
+
     .hero-wrapper {
         position: absolute;
         top: 50%;
@@ -373,56 +378,56 @@ a.active:hover + .nav-underbar {
         transform: translate(-50%, -50%);
         margin: 0;
     }
-    
+
     .hero-logo img {
-       height: 7vh;
+        height: 7vh;
     }
-    
+
     #mobile-nav-button {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+
         height: 7vh;
         width: 8vh;
-        
+
         margin-top: auto;
         margin-bottom: auto;
         margin-left: 10px;
-        
+
         border-radius: 5px;
     }
-    
+
     #burger {
         position: relative;
         width: 90%;
         height: 60%;
         left: 50%;
         transform: translateX(-50%);
-        
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         z-index: 1000;
     }
-    
+
     .burger-piece {
         width: 100%;
         height: 6px;
-        
+
         background-color: #eee;
     }
-    
+
     #main-nav {
         display: none;
         position: fixed;
         height: 100%;
         width: 100%;
-        
+
         margin: 0;
         background-color: rgba(51, 47, 65, 0.95);
     }
-    
+
     #tap-close-wrap {
         position: relative;
         top: 70%;
@@ -430,7 +435,7 @@ a.active:hover + .nav-underbar {
         flex-direction: column;
         justify-content: center;
     }
-    
+
     #nav-tap-close {
         color: #eee;
         font-weight: 300;
@@ -440,103 +445,73 @@ a.active:hover + .nav-underbar {
         margin: 0;
         opacity: .5;
     }
-    
+
     #nav-wrapper {
         position: absolute;
         top: 14.5vh;
         width: 100vw;
     }
-    
+
     .nav-items {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        
+
         margin: 0;
         padding: 0;
-        
+
         height: 25vh;
     }
-    
+
     .nav-item:nth-child(1) {
         margin-right: 0;
     }
-    
+
     .nav-item:nth-child(2) {
         margin-right: 0;
     }
-    
+
     .nav-item:nth-child(3) {
         margin-left: 0;
     }
-    
+
     .nav-item:nth-child(4) {
         margin-left: 0;
     }
-    
+
     .nav-item a {
-        color: #eee;
+        color: #ccc;
         font-size: 1.5em;
     }
     
-    #info-main {
-        flex-direction: column;
-        font-size: 1.5em;
-        height: 100px;
-        display: inline-block;
+    #games-section-wrapper {
+        padding-top: 10vh;
     }
 
-    #non-dynamic {
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-    }
-    
-    #intro {
-        margin: 0;
-        padding: 0;
-    }
-
-    #header-text {
-        font-size: 2em;
-    }
-
-    #header-sub {
-        margin-top: 10px;
-        margin-bottom: 25px;
-        text-align: center;
-    }
-
-    .social-media {
-        flex-direction: column;
-    }
-
-    .media-partition {
-        justify-content: center;
-    }
-
-    .mover-wrapper {
-        bottom: 25px;
-    }
-
-    #info-wrap {
-        flex-direction: column;
-        margin-top: 9vh;
-    }
-    
-    .text-content {
-        margin: 0;
+    #games-inner {
         width: 95%;
+    }
+
+    .games-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 0;
+    }
+    
+    .games-item {
+        margin-bottom: 25px;
+        width: 95%;
+        height: 225px;
         margin-left: auto;
         margin-right: auto;
     }
-    
-    .text-content:nth-child(2) {
-        margin: 3px 0;
-    }
 
-    
     #footer-wrapper {
         height: 100px;
+    }
+    
+    .inner-footer {
+        font-size: .8em;
     }
 }

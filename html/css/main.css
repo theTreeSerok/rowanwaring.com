@@ -675,4 +675,8 @@ a.active:hover + .nav-underbar {
     #footer-wrapper {
         height: 100px;
     }
+    
+    .inner-footer {
+        font-size: .8em;
+    }
 }

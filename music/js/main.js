@@ -1,6 +1,9 @@
 "use strict";
 
 $(document).ready(function() {
+    var backToTopHTML = $("#btn-to-top-txt").html();
+    var backToTopHoverHTML = "&UpArrowBar;";
+    
     $("a[href^='#']").click(function(e) {
         e.preventDefault();
 
@@ -54,6 +57,14 @@ $(document).ready(function() {
             $($(this).next().slideDown(250)); 
         }
     });
+    
+    $("#button-to-top").hover(
+        function() {
+            $("#btn-to-top-txt").html(backToTopHoverHTML);
+        }, 
+        function() {
+            $("#btn-to-top-txt").html(backToTopHTML);
+        });
 
     $(window).on("scroll", function() {
         if($(window).scrollTop() > 50) {

@@ -203,8 +203,8 @@ a.active:hover + .nav-underbar {
     justify-content: center;
 }
 
-.music-track {
-    width: 100%;
+.music-track iframe {
+    height: 300px;
 }
 
 .music-desc-expand-button {
@@ -280,27 +280,32 @@ a.active:hover + .nav-underbar {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     width: 250px;
     height: 50px;
-    border: 2px solid #e300e3;
-    border-radius: 25px;
 
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
 
-    transition: .3s ease;
+    transition: .2s linear;
 }
 
-.mover-button:hover {
-    border: 2px solid #6deeca;
-    background-color: rgba(0,0,0,.3);
+.button-brackets {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 .mover-link {
     color: #eee;
     font-size: 1.3em;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 /* footer */
@@ -455,64 +460,44 @@ a.active:hover + .nav-underbar {
         font-size: 1.5em;
     }
     
-    #info-main {
-        flex-direction: column;
-        font-size: 1.5em;
-        height: 100px;
-        display: inline-block;
-    }
-
-    #non-dynamic {
-        justify-content: center;
-        padding: 0;
-        margin: 0;
+    #music-section-wrapper {
+        padding-top: 10vh;
     }
     
-    #intro {
-        margin: 0;
-        padding: 0;
-    }
-
-    #header-text {
-        font-size: 2em;
-    }
-
-    #header-sub {
-        margin-top: 10px;
-        margin-bottom: 25px;
-        text-align: center;
-    }
-
-    .social-media {
-        flex-direction: column;
-    }
-
-    .media-partition {
-        justify-content: center;
-    }
-
-    .mover-wrapper {
-        bottom: 25px;
-    }
-
-    #info-wrap {
-        flex-direction: column;
-        margin-top: 9vh;
-    }
-    
-    .text-content {
-        margin: 0;
+    #music-inner {
         width: 95%;
-        margin-left: auto;
-        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     
-    .text-content:nth-child(2) {
-        margin: 3px 0;
+    .music-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 0;
     }
-
+    
+    .music-item {
+        width: 95%;
+        margin-bottom: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .music-track {
+        height: 210px;
+    }
+    
+    .music-track iframe {
+        height: 200px;
+    }
     
     #footer-wrapper {
         height: 100px;
+    }
+    
+    .inner-footer {
+        font-size: .8em;
     }
 }
