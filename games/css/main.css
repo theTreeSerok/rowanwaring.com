@@ -297,6 +297,11 @@ a.active:hover + .nav-underbar {
     position: relative;
     width: 100%;
     height: 54px;
+    
+    text-align: center;
+    
+    display: flex;
+    justify-content: center;
 }
 
 .mover-button {
