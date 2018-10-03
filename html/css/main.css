@@ -348,14 +348,14 @@ a.active:hover + .nav-underbar {
     flex-direction: column;
     justify-content: center;
 
-    border: 2px solid #eee;
-    border-radius: 25px;
+    border: 1px solid #eee;
+    border-radius: 10px;
 
-    transition: .2s linear;
+    transition: .15s ease-out;
 }
 
 #resume-button:hover {
-    border: 2px solid #111;
+    border: 1px solid #111;
     background-color: rgba(0,0,0,0.3);
 }
 
@@ -363,7 +363,7 @@ a.active:hover + .nav-underbar {
     padding: 10px 50px;
     font-size: 1.2em;
     color: #eee;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 /* other */
