@@ -1,6 +1,14 @@
 "use strict";
 
 $(document).ready(function() {
+    var aboutMeHTML = $("#btn-about-me-txt").html();
+    var contactMeHTML = $("#btn-contact-me-txt").html();
+    var backToTopHTML = $("#btn-to-top-txt").html();
+    
+    var aboutMeHoverHTML = "&DownArrowBar;";
+    var contactMeHoverHTML = "&DownArrowBar;";
+    var backToTopHoverHTML = "&UpArrowBar;";
+
     $("a[href^='#']").click(function(e) {
         e.preventDefault();
 
@@ -24,15 +32,15 @@ $(document).ready(function() {
 
         return false;
     });
-    
+
     $("#burger").click(function(e) {
         $("#main-nav").fadeIn(100, function() {
             $("#main-nav").addClass('nav-open');
         });
-        
+
         $("#mobile-nav-button").fadeOut(100);
     });
-    
+
     $("#main-nav").click(function(e) {
         if ( $(this).is(".nav-open") ) {
             $(this).removeClass("nav-open");
@@ -41,7 +49,7 @@ $(document).ready(function() {
             });
         }
     });
-    
+
     $(window).on("scroll", function() {
         if($(window).scrollTop() > 50) {
             $(".header-wrapper").addClass("scrolled");
@@ -49,7 +57,35 @@ $(document).ready(function() {
             $(".header-wrapper").removeClass("scrolled");
         }
     });
-    
+
+    // hover button transitions
+
+    $("#button-about-me").hover(
+        function() {
+            $("#btn-about-me-txt").html(aboutMeHoverHTML);
+        }, 
+        function() {
+            $("#btn-about-me-txt").html(aboutMeHTML)
+        });
+
+    $("#button-contact-me").hover(
+        function() {
+            $("#btn-contact-me-txt").html(contactMeHoverHTML);
+        }, 
+        function() {
+            $("#btn-contact-me-txt").html(contactMeHTML)
+        });
+
+    $("#button-to-top").hover(
+        function() {
+            $("#btn-to-top-txt").html(backToTopHoverHTML);
+        }, 
+        function() {
+            $("#btn-to-top-txt").html(backToTopHTML);
+        });
+
+    // landing typer
+
     var typed;
 
     function startTyped() {
@@ -70,11 +106,11 @@ $(document).ready(function() {
             showCursor: false
         });
     }
-    
+
     function startIntro() {
         $("#pre-intro").css('display', 'block');
         $("#pre-intro").animate({ opacity: 1 }, { duration: 500 });
-            
+
         setTimeout(startTyped, 100);
     }
 
