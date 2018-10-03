@@ -502,9 +502,12 @@ a.active:hover + .nav-underbar {
     .games-item {
         margin-bottom: 25px;
         width: 95%;
-        height: 225px;
         margin-left: auto;
         margin-right: auto;
+    }
+    
+    .games-image {
+        height: 180px;
     }
 
     #footer-wrapper {
