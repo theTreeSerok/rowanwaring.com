@@ -5,9 +5,9 @@ $(document).ready(function() {
     var contactMeHTML = $("#btn-contact-me-txt").html();
     var backToTopHTML = $("#btn-to-top-txt").html();
     
-    var aboutMeHoverHTML = "&DownArrowBar;";
-    var contactMeHoverHTML = "&DownArrowBar;";
-    var backToTopHoverHTML = "&UpArrowBar;";
+    var aboutMeHoverHTML = "about me";
+    var contactMeHoverHTML = "contact me";
+    var backToTopHoverHTML = "back to top";
 
     $("a[href^='#']").click(function(e) {
         e.preventDefault();

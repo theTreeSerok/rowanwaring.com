@@ -20,6 +20,24 @@ body {
     background-size: cover;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #191d23;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #04a276;
+    opacity: 0.5%;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #15b387;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
 .header-wrapper {
     position: fixed;
     height: 150px;

@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
     var backToTopHTML = $("#btn-to-top-txt").html();
-    var backToTopHoverHTML = "&UpArrowBar;";
+    var backToTopHoverHTML = "back to top";
     
     $("a[href^='#']").click(function(e) {
         e.preventDefault();
